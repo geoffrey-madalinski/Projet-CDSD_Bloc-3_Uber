@@ -20,7 +20,7 @@ cd Projet_Uber
 
 ## Technical stack
 
-- Python — Pandas, NumPy, scikit-learn (KMeans, DBSCAN, StandardScaler),
+Python — Pandas, NumPy, scikit-learn (KMeans, DBSCAN, StandardScaler),
   plotly.express, Matplotlib
 
 ## Usage
