@@ -1,10 +1,10 @@
 # Uber Pickups
 
 > Mandatory project for **block 3** (Predictive analysis of structured data using
-> artificial intelligence) of the French **CDSD certification** — Concepteur Développeur en Science
+> artificial intelligence) of the French **CDSD certification** - Concepteur Développeur en Science
 > des Données | RNCP35288 | JEDHA
 
-Analysis of historical Uber pickup data in New York (2014) to identify **hotspots**—areas with the highest demand, hour by hour and day by day—and recommend them to drivers.<br>
+Analysis of historical Uber pickup data in New York (2014) to identify **hotspots**-areas with the highest demand, hour by hour and day by day-and recommend them to drivers.<br>
 Each row in the dataset represents a pickup.
 
 ## Problem statement
@@ -14,13 +14,13 @@ Uber aims to optimize its customer pickup process: if the wait exceeds 5 to 7 mi
 ## Installation
 
 ```bash
-git clone https://github.com/geoffrey-madalinski/Projet_Uber.git
-cd Projet_Uber
+git clone https://github.com/geoffrey-madalinski/Projet-CDSD_Bloc-3_Uber.git
+cd Projet-CDSD_Bloc-3_Uber
 ```
 
 ## Technical stack
 
-Python — Pandas, NumPy, scikit-learn (KMeans, DBSCAN, StandardScaler),
+Python - Pandas, NumPy, scikit-learn (KMeans, DBSCAN, StandardScaler),
   plotly.express, Matplotlib
 
 ## Usage
@@ -47,29 +47,29 @@ Projet_Uber/
 
 ## Data
 
-- **Source** : Uber pickup data for 2014 (April → September), ~4.5 million trips
+- **Source** : Uber pickup data for 2014 (April -> September), ~4.5 million trips
 - **Columns** : `Date/Time`, `Lat`, `Lon`, `Base` (renamed to `datetime`, `lat`, `lon`, `base`)
 - **Granularity** : one raw = one hadling of a customer
 - **Derived features** : `hour`, `dayofweek`, `dayname`, `month`
 
 ## Approach
 
-1. **Data loading & preparation** — concatenating the 6 CSV files, converting dates,
+1. **Data loading & preparation** - concatenating the 6 CSV files, converting dates,
 extracting temporal features, checking for missing values
-2. **Exploratory Data Analysis (EDA)** — pickups by hour and day, plus a cross-tabulated
+2. **Exploratory Data Analysis (EDA)** - pickups by hour and day, plus a cross-tabulated
 day × hour heatmap to identify peak periods
-3. **K-Means clustering** — initially on a specific peak (Friday at 6 PM), then
+3. **K-Means clustering** - initially on a specific peak (Friday at 6 PM), then
 generalized to every day of the week to map activity centers (hot zones)
-4. **DBSCAN clustering** — density-based approach without a fixed number of clusters,
+4. **DBSCAN clustering** - density-based approach without a fixed number of clusters,
 handling noise and coordinate normalization
-5. **K-Means vs. DBSCAN comparison** — summary table of strengths and limitations
-6. **Conclusion** — summary and product recommendations
+5. **K-Means vs. DBSCAN comparison** - summary table of strengths and limitations
+6. **Conclusion** - summary and product recommendations
 
 ## Key findings
 
 | Question | Key Finding |
 |---|---|
-| Peak demand times | Two peaks: morning (7–9 AM) and, most notably, 4–7 PM. |
+| Peak demand times | Two peaks: morning (7-9 AM) and, most notably, 4-7 PM. |
 | Peak demand days | Demand peaks on **Thursdays** and **Fridays**. |
 | K-Means | 8 zones that remain stable from day to day (Midtown, Lower Manhattan, airports, train stations). |
 | DBSCAN | One large cluster covering Manhattan + isolated pockets at the airports (JFK, LaGuardia, Newark). |
@@ -82,6 +82,6 @@ handling noise and coordinate normalization
 
 ## Author
 
-**Geoffrey MADALINSKI** — Certification CDSD (RNCP35288) - JEDHA
+**Geoffrey MADALINSKI** - Certification CDSD (RNCP35288) - JEDHA
 
 ---
